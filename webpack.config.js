@@ -6,7 +6,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     clean: true,
     publicPath: "/",
     environment: {
@@ -25,12 +25,12 @@ module.exports = {
       patterns: [
         {
           from: path.join(__dirname, "src", "images"),
-          to: path.join(__dirname, "dist", "images"),
+          to: path.join(__dirname, "public", "images"),
         },
       ],
     }),
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: "./src/templates/index.html",
       filename: "index.html",
     }),
   ],
