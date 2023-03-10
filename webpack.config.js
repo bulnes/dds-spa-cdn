@@ -20,6 +20,11 @@ module.exports = {
     },
     historyApiFallback: true,
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
