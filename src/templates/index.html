@@ -40,13 +40,22 @@
     ></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="dds__container-fluid">
+      <div class="row">
+        <div class="dds__col--1 dds__col--sm-3 dds__col--md-6">
+          <h1>Hello World</h1>
 
-    <nav>
-      <a href="#" onclick="navegacao('/'); return false;">Home</a>
-      <a href="#" onclick="navegacao('/other'); return false;">Other</a>
-    </nav>
+          <nav>
+            <a href="#" onclick="navigation('/'); return false;">Home</a>
+            <a href="#" onclick="navigation('/other'); return false;">Other</a>
+          </nav>
+        </div>
 
-    <main data-container="main"></main>
+        <main
+          class="dds__col--1 dds__col--sm-3 dds__col--md-6"
+          data-container="main"
+        ></main>
+      </div>
+    </div>
   </body>
 </html>

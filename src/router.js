@@ -1,32 +1,29 @@
 import initTable from "./pages/index";
 import initOther from "./pages/other";
 
-const rotas = {
+const routes = {
   "/": initTable,
   "/other": initOther,
 };
 
 const rootDiv = document.querySelector("[data-container]");
 
-const navegacao = (pathname) => {
+const navigation = (pathname) => {
   window.history.pushState({}, pathname, window.location.origin + pathname);
 
   rootDiv.innerHTML = "";
 
-  const iniciarRota = rotas[window.location.pathname];
-
-  rootDiv.appendChild(iniciarRota());
+  const initRoute = routes[window.location.pathname];
+  rootDiv.appendChild(initRoute());
 };
 
-window.navegacao = navegacao;
+window.navigation = navigation;
 
-// evento de retirada de uma sessão do histórico
 window.onpopstate = () => {
   rootDiv.innerHTML = "";
 
-  const rota = rotas[window.location.pathname];
-
-  rootDiv.appendChild(rota());
+  const route = routes[window.location.pathname];
+  rootDiv.appendChild(route());
 };
 
-export default navegacao;
+export default navigation;

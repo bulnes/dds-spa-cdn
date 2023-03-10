@@ -6,7 +6,7 @@ const initTable = () => {
         <th scope="col">Nome</th>
         <th scope="col"></th>
         <th scope="col">
-          <a class="btn btn-primary" onclick="navegacao('/cadastro'); return false;">
+          <a class="btn btn-primary" onclick="navigation('/cadastro'); return false;">
             Novo Cliente
           </a>
         </th>
