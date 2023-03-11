@@ -1,4 +1,4 @@
-import navigation from "@/router";
+import navigation from "../router";
 
 export function configSpaLinks() {
   const gotoLinks = document.querySelectorAll("[data-goto]");
