@@ -1,4 +1,4 @@
-const initTable = () => {
+const faq = () => {
   const conteudo = `
     <thead class="thead-dark">
       <tr>
@@ -21,4 +21,4 @@ const initTable = () => {
   return tabela;
 };
 
-export default initTable;
+export default faq;

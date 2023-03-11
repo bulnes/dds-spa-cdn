@@ -1,8 +1,10 @@
-import initTable from "./pages/index";
+import dashboard from "./pages/dashboard";
+import faq from "./pages/faq";
 import initOther from "./pages/other";
 
 const routes = {
-  "/": initTable,
+  "/": dashboard,
+  "/faq": faq,
   "/other": initOther,
 };
 
